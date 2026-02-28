@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Etiketleri -->
+    <title>Beykaynak Makina | Ankara Ostim CNC Torna ve Talaşlı İmalat</title>
+    <meta name="description" content="Ankara Ostim'de CNC Torna, Dik İşleme ve Fason İmalat çözümleri. 4.8 Google müşteri memnuniyet puanı ile hassas üretim ve zamanında teslimat.">
+    <meta name="keywords" content="Ankara CNC Torna, Ostim Fason İmalat, Talaşlı İmalat, Dik İşleme Merkezi, Metal İşleme, Yedek Parça İmalatı, Beykaynak Makina">
+    <meta name="author" content="Beykaynak Makina">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Sosyal Medya Paylaşımı İçin) -->
+    <meta property="og:title" content="Beykaynak Makina - Ostim CNC Çözümleri">
+    <meta property="og:description" content="Hassas üretim, zamanında teslimat. Ostim'deki çözüm ortağınız.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1565439390118-c5fd7bb46c76?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Fontlar: Endüstriyel ve Okunaklı -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- İkon Seti -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS DEĞİŞKENLERİ --- */
+        :root {
+            --primary-color: #002B5B; /* Koyu Lacivert */
+            --secondary-color: #2C3E50; /* Koyu Gri */
+            --accent-color: #F39C12; /* Güvenlik Sarısı/Turuncu */
+            --light-bg: #F4F6F7; /* Açık Gri Zemin */
+            --text-color: #333333;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- GENEL AYARLAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            white-space: nowrap; /* Buton içi metin kaymasın */
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #d68910;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* --- ÜST BİLGİ ÇUBUĞU (TOP BAR) --- */
+        .top-bar {
+            background-color: var(--secondary-color);
+            color: #ddd;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-items span {
+            margin-right: 20px;
+        }
+
+        .contact-items i {
+            color: var(--accent-color);
+            margin-right: 5px;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            padding: 0 10px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+            margin-right: 12px;
+            font-size: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--secondary-color);
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links .btn {
+            margin-left: 20px;
+        }
+        
+        .nav-links .btn::after {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* --- HERO SECTION (GİRİŞ) --- */
+        .hero {
+            /* Dışarıdan çekilen kaliteli endüstriyel görsel */
+            background: linear-gradient(rgba(0, 43, 91, 0.85), rgba(0, 43, 91, 0.7)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* Google Puan Rozeti */
+        .google-badge {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: max-content;
+        }
+
+        .google-badge .score {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .google-badge .stars {
+            color: #FFD700;
+        }
+
+        .google-badge span {
+            font-size: 12px;
+            color: #666;
+            display: block;
+        }
+
+        /* --- BÖLÜM BAŞLIKLARI --- */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header .divider {
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        /* --- HAKKIMIZDA --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* --- HİZMETLER --- */
+        .services-section {
+            background-color: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--accent-color);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* --- MAKİNE PARKURU & GALERİ --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- İLETİŞİM --- */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .contact-section h2 {
+            color: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .contact-info {
+            padding: 50px;
+            background-color: #002244;
+            color: var(--white);
+        }
+
+        .contact-info-item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-item i {
+            font-size: 24px;
+            color: var(--accent-color);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .contact-info-item h4 {
+            color: var(--white);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info-item p, .contact-info-item a {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* --- WHATSAPP BUTONU --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px; /* Sol tarafta rozet olduğu için sağda kalacak */
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- DEMO ROZETİ (UNAL PARTNERLİK) --- */
+        .demo-badge {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #1c2128;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 8px 16px 8px 8px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 9999;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .demo-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            border-color: #4a5568;
+        }
+
+        .demo-badge-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #2d3748;
+        }
+
+        .demo-badge-text {
+            margin-left: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .demo-badge-title {
+            color: #F1C40F;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .demo-badge-subtitle {
+            color: #A0AEC0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* --- MOBİL UYUMLULUK --- */
+        @media (max-width: 1150px) {
+            .top-bar { display: none; }
+            
+            .navbar {
+                height: 70px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display: none;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links .btn {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .google-badge {
+                width: 90%;
+                flex-direction: column;
+                padding: 10px;
+                bottom: -60px;
+            }
+
+            .demo-badge {
+                bottom: 10px;
+                left: 10px;
+                padding: 6px 12px 6px 6px;
+            }
+
+            .demo-badge-logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .demo-badge-title {
+                font-size: 11px;
+            }
+
+            .demo-badge-subtitle {
+                font-size: 9px;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Yapısal Veri -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Beykaynak Makina",
+      "image": "https://images.unsplash.com/photo-1565439390118-c5fd7bb46c76?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "telephone": "(0312) 354 51 63",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ostim, 1474. Sk. No:32",
+        "addressLocality": "Yenimahalle",
+        "addressRegion": "Ankara",
+        "postalCode": "06374",
+        "addressCountry": "TR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "50" 
+      },
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Üst Bilgi Çubuğu -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-items">
+                <span><i class="fas fa-map-marker-alt"></i> Ostim, 1474. Sk. No:32, Ankara</span>
+                <span><i class="fas fa-clock"></i> Pzt - Cmt: 08:30 - 18:30</span>
+            </div>
+            <div class="social-icons">
+                <a href="tel:03123545163" style="color:#ddd;"><i class="fas fa-phone"></i> (0312) 354 51 63</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <i class="fas fa-cogs"></i> Beykaynak
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#anasayfa">Ana Sayfa</a>
+                <a href="#hakkimizda">Kurumsal</a>
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#iletisim">İletişim</a>
+                <a href="tel:03123545163" class="btn btn-primary">TEKLİF AL</a>
+            </nav>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="container hero-content">
+            <h1>ANKARA OSTİM'DE<br>HASSAS ÇÖZÜM ORTAĞINIZ</h1>
+            <p>Modern CNC parkurumuz ve uzman kadromuzla, talaşlı imalat ve fason üretimde endüstriyel standartların üzerinde, hatasız hizmet veriyoruz.</p>
+            <a href="#iletisim" class="btn btn-primary">Hemen Teklif Alın</a>
+            <a href="#hakkimizda" class="btn btn-outline">Hakkımızda</a>
+        </div>
+        
+        <!-- Google Trust Badge -->
+        <div class="google-badge">
+            <div class="score">4.8</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="details">
+                <strong>Mükemmel Hizmet</strong>
+                <span>Google Müşteri Puanı</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="section-padding" style="margin-top: 50px;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header" style="text-align: left;">
+                        <h2>GÜVEN VE KALİTE</h2>
+                        <div class="divider" style="margin: 0;"></div>
+                    </div>
+                    <p style="margin-top: 20px; margin-bottom: 20px;">Beykaynak Makina olarak, Türkiye sanayisinin kalbi <strong>Ankara Ostim</strong>'de, modern teknolojiyi tecrübe ile birleştiriyoruz.</p>
+                    <p>Yüksek hassasiyetli <strong>CNC Torna</strong> ve <strong>Dik İşleme</strong> tezgahlarımızla; otomotiv, savunma sanayi, iş makineleri ve genel makine imalatı sektörlerine fason parça üretimi yapıyoruz. "Sıfır Hata" prensibiyle çalışıyor, termin sürelerine sadık kalıyoruz.</p>
+                    
+                    <ul style="margin-top: 20px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color:var(--accent-color)"></i> Hassas Ölçüm ve Kalite Kontrol</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color:var(--accent-color)"></i> Fason Seri İmalat Kapasitesi</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color:var(--accent-color)"></i> Müşteri Odaklı Çözümler</li>
+                    </ul>
+                </div>
+                <!-- Otomatik çekilen Kalite Kontrol/Atölye görseli -->
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5e89?auto=format&fit=crop&w=800&q=80" alt="Beykaynak Makina Ostim Atölye İçi">
+                    <div class="experience-badge">
+                        <span>Ostim'de</span><br>
+                        Güvenilir<br>Adres
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="section-padding services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>NELER YAPIYORUZ?</h2>
+                <div class="divider"></div>
+                <p style="margin-top: 15px; color: #666;">Endüstriyel ihtiyaçlarınız için kapsamlı talaşlı imalat çözümleri.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-industry service-icon"></i>
+                    <h3>CNC Torna İşleri</h3>
+                    <p>Farklı çap ve boylardaki millerin, flanşların ve özel parçaların mikron hassasiyetinde seri imalatı.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-layer-group service-icon"></i>
+                    <h3>Dik İşleme (Freze)</h3>
+                    <p>Karmaşık geometrili parçaların işlenmesi, delik delme, diş açma ve yüzey işleme operasyonları.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs service-icon"></i>
+                    <h3>Fason İmalat</h3>
+                    <p>Projenize uygun malzemelerle, teknik resme tam uyumlu seri veya adet bazlı fason üretim.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wrench service-icon"></i>
+                    <h3>Yedek Parça Üretimi</h3>
+                    <p>İş makineleri ve endüstriyel makineler için yüksek dayanımlı yedek parça ve ekipman imalatı.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="section-padding contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>BİZE ULAŞIN</h2>
+                <div class="divider" style="background-color: var(--white);"></div>
+                <p style="margin-top: 15px; color: #ddd;">Projeleriniz için fiyat teklifi alın veya atölyemizi ziyaret edin.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <h4>Adresimiz</h4>
+                            <p>Ostim, 1474. Sk. No:32, 06374 Yenimahalle/Ankara</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-volume"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:03123545163">(0312) 354 51 63</a></p>
+                            <p>Bizi çalışma saatleri içinde arayabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h4>Müşteri Memnuniyeti</h4>
+                            <p>Google Puanımız: <strong>4.8 / 5.0</strong></p>
+                        </div>
+                    </div>
+                    
+                    <a href="tel:03123545163" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">HEMEN ARAYIN</a>
+                </div>
+                
+                <div class="map-container">
+                    <!-- Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.6276856789!2d32.74!3d39.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU3JzM2LjAiTiAzMsKwNDQnMzAuMCJF!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Beykaynak Makina. Tüm Hakları Saklıdır.</p>
+            <p style="font-size: 12px; margin-top: 5px;">Ankara Ostim CNC Torna ve Talaşlı İmalat Çözümleri</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/903123545163" class="whatsapp-float" target="_blank" title="WhatsApp ile İletişime Geçin">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Unal Partnerlik Demo Rozeti -->
+    <a href="https://unal-partnering.github.io/anasayfa" class="demo-badge" target="_self">
+        <img src="unal.jpg" alt="Ünal Partnerlik Logo" class="demo-badge-logo">
+        <div class="demo-badge-text">
+            <span class="demo-badge-title">ÜNAL PARTNERLİK</span>
+            <span class="demo-badge-subtitle">DEMO WEBSİTESİDİR</span>
+        </div>
+    </a>
+
+    <script>
+        // Mobil Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Menü linklerine tıklandığında menüyü kapat (Mobilde)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
